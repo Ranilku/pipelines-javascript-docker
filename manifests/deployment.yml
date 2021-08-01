@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: ranilkupipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ranilkupipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: ranilkupipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: ranilkupipelinesjavascriptdocker 
+          image: esacr1.azurecr.io/ranilkupipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
